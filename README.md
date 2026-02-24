@@ -55,3 +55,13 @@ Beginners starting Python
 Developers who want quick syntax revision
 
 Anyone who wants structured Python learning
+
+🎯 Goal
+
+The goal of this repository is to provide a clear and structured Python syntax reference from beginner to advanced level in a simple and understandable way.
+
+📌 Author
+
+👨‍💻 Vijay Bhattarai
+Aspiring AI Engineer | Automation & CRM Specialist
+📫 Email: bijaybhattrarai5544@gmail.com
