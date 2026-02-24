@@ -49,13 +49,19 @@
  
 #Calucate 
 
-Length = float(input(" Enter the length: "))
-Width = float(input(" Enter the Width: "))
+# Length = float(input(" Enter the length: "))
+# Width = float(input(" Enter the Width: "))
 
-Area = Length * Width 
+# Area = Length * Width 
 
-print( f" The Area is : {Area} cm ") 
+# print( f" The Area is : {Area} cm ") 
 
 #Shopping Cart Program 
 
-item = input()
+# item = input("What item Would you like to buy?: ")
+# price = float(input("What is the price?: "))
+# quantity = int(input("How many Would you like?: "))
+# total = price * quantity
+
+# print(f"you have total bought {quantity}  x {item}/s")
+# print(f"your total is: ${total}")
