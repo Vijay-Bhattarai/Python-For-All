@@ -207,7 +207,7 @@
 
  # Python weight conveter Program 
 
-weight = float(input("Enter your weight: "))
+# weight = float(input("Enter your weight: "))
 # unit = input("Killograms or Pounds?( K or `L): ")
 
 
@@ -222,3 +222,45 @@ weight = float(input("Enter your weight: "))
 # else:
 #     print(f"{unit} is not valid")
     
+# Logical operators = evaluate mutliple comdtions ( or , and, not)
+#   or = at least one condtion must be true 
+#   and = both condtions must be true
+#   not = inverts the condition (not false, not True)
+
+# temp = 20
+# is_raining = True
+
+
+# if temp > 35 or temp < 0 or is_raining:
+#     print("It's not a good time to go outside!")
+# else:
+#     print("It's a good time to go outside!")
+ 
+# temp = 0
+# is_sunny = False
+
+# if temp >= 28 and is_sunny:
+#     print(" It is hot outside!")
+#     print(" It is sunny")
+# elif temp <= 0 and is_sunny:
+#     print("It is cold outside")
+#     print("It is sunny")
+# elif  28 > temp > 0 and is_sunny:
+#     print("It is warm outside")
+#     print("It is sunny")
+# elif temp <= 0 and not is_sunny:
+#     print("It is cold outside")
+#     print("It is Cloudy")
+# elif  28 > temp > 0 and not is_sunny:
+#     print("It is warm outside")
+#     print("It is Cloudy")
+# elif  28 > temp > 0 and not is_sunny:
+#     print("It is warm outside")
+#     print("It is Cloudy")
+
+# conditional expression = A one-line shortcut for the if-else statement (ternary operator)
+#  print or assign one of two values based on a condition 
+#  X if condition else Y 
+
+
+
