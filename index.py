@@ -262,5 +262,93 @@
 #  print or assign one of two values based on a condition 
 #  X if condition else Y 
 
+# num = 7
+# a = 6
+# b = 7 
+# age = 17
+# tempertature = 16
+# user_role = "Guest"
+# # print("Postive" if num> 0 else "Negative")
+# # result = "Even" if num % 2 == 0 else "0dd"
+# # max_num = a if a > b else b
+# # min_num = a if a < b else b
+# # status = "Adult" if age >= 18 else "Child"
+# # weather = "Hot" if tempertature > 20 else "Cold"
+
+# access_level = "Full Acess" if user_role == "Admin" else "Limited Acess"
+
+# print(access_level)
+
+# string methods 
+
+# name = input("Enter your full name: ")
+
+# phone_number = input("Enter your phone number: ")
+
+# result = name.find("a")
+# result = name.rfind("l")
+# result = len(name)
+# name = name.capitalize()
+# name = name.upper()
+# name = name.lower()
+# result = name.isdigit()
+# result = name.isalpha()
+
+# result = phone_number.count("-")
+# phone_number = phone_number.replace("-", " ")
+
+# print(phone_number)
+
+
+# print(help(str))
+
+
+#Validate user input exercise 
+#1. usenname is no more than  12 characters
+#2. username must not contain spaces
+#.  username must be not contain digits 
+
+# username = input("Enter a username: ")
+
+
+
+# if len(username) > 12:
+#     print("Your username can't be more than 12 character" )
+# elif not username.find(" ") == -1:
+#     print("Your username can't contain spaces ")
+# elif  not username.isalpha():
+#     print("Your username can't contain numbers")
+# else:
+#     print(f"Welcome {username}")
+
+
+#String Indexing = acessing elements of a sequence using [] (indexing operator ) 
+# # [start : end : step]
+
+# credit_number = "1333-3343-3433-3432"
+
+# # print(credit_number[0])
+# # print(credit_number[0:4])
+# # print(credit_number[5:9])
+# # print(credit_number[5:])
+# # print(credit_number[-1])
+# # print(credit_number[::2])
+
+# credit_number = credit_number[::-1]
+
+# # last_digits = credit_number[-4:]
+# # print(f"xxxx-xxxx-xxxx-{last_digits}")
+
+# print(credit_number) 
+
+#Format specifiers = {value.flags} format a value based on what flags are inserted
+
+# price1 = 233234.34324
+# price2 = -324324.324
+# price3 = 1233.34
+
+# print(f"Price is ${price1:+,.2f}")
+# print(f"Price is ${price2:+,.2f}")
+# print(f"Price is ${price3:+,.2f}")
 
 
