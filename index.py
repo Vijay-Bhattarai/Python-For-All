@@ -351,5 +351,160 @@
 # print(f"Price is ${price2:+,.2f}")
 # print(f"Price is ${price3:+,.2f}")
 
+#While loop = execute some code While some condition remains true
 
- 
+# name= input("Enter your name:")
+
+# while name == "":
+#   print("you did not enter your name")
+#   name= input("Enter your name:")
+#   print(f"Hello {name}")
+
+# age= int(input("Enter your age:"))
+
+# while age < 0:
+#     print("Age can be less than 0")
+#     age= int(input("Enter your age:"))
+   
+# print(f"Your are {age} years old")
+
+
+#Logical operators = evaluate multiple condtions ( or , and, not)
+#  or = at least one condtion must be true 
+#  and = both condtions must be true
+#  not = inverts the condition (not false, not True)
+
+# food = input("Enter a food you like (q to quit): ")
+
+# while not food == "q":
+#     print(f"you like {food}")
+#     food = input("Enter another food you like (q to quit): ")
+    
+# print("bye")
+
+# num = int(input("Enter a # between 1 - 10: "))
+
+# while num < 1 or num > 10:
+#     print(f"{num} is not valid")
+#     num = int(input("Enter a # between 1 - 10: "))
+
+# print(f" Your number is {num}")   
+
+#python compound interest calculator
+
+priciple = 0
+rate = 0
+time = 0
+
+# while priciple <= 0:
+#     priciple = float(input("Enter the principal amount: "))
+#     if priciple <= 0:
+#         print("Principal must be greater than 0")
+
+
+# while rate <= 0:
+#     rate = float(input("Enter the interest rate: "))
+#     if rate <= 0:
+#         print("Interest rate must be greater than 0")
+
+# while time <= 0:
+#     time = int(input("Enter the time period in years: "))
+#     if time <= 0:
+#         print("Time period must be greater than 0")
+
+
+# while True:
+#     priciple = float(input("Enter the principal amount: "))
+#     if priciple < 0:
+#         print("Principal must be less than 0")
+#     else:
+#         break
+
+
+# while True:
+#     rate = float(input("Enter the interest rate: "))
+#     if rate < 0:
+#         print("Interest rate must be less than 0")
+#     else:
+#         break
+
+# while True:
+#     time = int(input("Enter the time period in years: "))
+#     if time < 0:
+#         print("Time period must be less than 0")
+#     else:
+#         break
+
+# total = priciple * pow((1 + (rate / 100)), time)
+# print(f"Balance after {time} years/s : ${total:.2f}")
+
+
+# for loop = execute some code for each item in a sequence (list, string, range,etc)
+
+# for x in range(1, 21):
+#     if x == 13:
+#         continue
+#     else:
+#         print(x)
+
+# for x in range(1, 21):
+#     if x == 13:
+#         break
+#     else:
+#         print(x)
+
+
+# Countdown timer
+
+import time
+
+# my_time = int(input("Enter the time in seconds:"))
+
+# for x in range(0, my_time):
+#     print(x)
+#     time.sleep(1)
+
+# print("Time's up!") 
+
+# my_time = int(input("Enter the time in seconds:"))
+
+# for x in reversed(range(0, my_time)):
+#     print(x)
+#     time.sleep(1)
+
+# print("Time's up!") 
+
+
+# my_time = int(input("Enter the time in seconds:"))
+
+# for x in range(my_time, 0, -1):
+#     seconds = x % 60
+#     minutes = int(x / 60) % 60
+#     hours = int(x/3600)
+#     print(f"{hours:02}:{minutes:02}:{seconds:02} second remaining")
+#     time.sleep(1)
+
+# print("Time's up!") 
+
+# nested Loops= a loop within another loop ( outer loop and inner loop)
+
+
+# rows = int(input("Enter the number of rows: "))
+# columns = int(input("Enter the number of columns: "))
+# symbol = input("Enter a symbol to use: ")
+
+# for x in range(rows):
+#     for y in range (columns):
+#         print(symbol, end="")
+#     print()
+
+
+# Collection = single "Variable" used to store multiple values (List, Tuple, Set, Dictionary)
+# List = []ordered, changeable, allows duplicate values
+# Set = {} unordered, immutable, but  Add/ Remove OK, no duplicate values
+# Tuple = () ordered, unchangeable, allows duplicate values
+
+
+fruits = ["apple", "banana", "orange", "grape"]
+
+print(fruits[0:3])
