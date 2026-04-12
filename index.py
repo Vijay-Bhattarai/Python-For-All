@@ -505,6 +505,189 @@ import time
 # Tuple = () ordered, unchangeable, allows duplicate values
 
 
-fruits = ["apple", "banana", "orange", "grape"]
+# fruits = ["apple", "banana", "orange", "grape", "mango"]
 
-print(fruits[0:3])
+# print(dir(fruits))
+# print(help(fruits))
+
+# print(fruits[0:3])
+
+# for fruit in fruits:
+#     print(fruit)
+# print(len(fruits))
+
+# print("apple" in fruits)
+# print("kiwi" in fruits)
+
+# fruits[0] = "kiwi"
+
+# for fruit in fruits:
+#  print(fruit)
+
+# fruits.append("banana")
+# print(fruits)
+
+
+# fruits.remove("orange")
+
+
+# fruits.insert(0, "kiwi")
+# fruits.sort()
+# fruits.reverse()
+# fruits.clear()
+# print(fruits.index("grape"))
+# print(fruits.count("grape"))
+# print(fruits)
+
+
+
+#### Set ={} unordered, immutable, but  Add/ Remove OK, no duplicate values
+
+
+# fruits = {"apple", "banana", "orange", "grape", "mango", "apple"}
+# # print(dir(fruits))
+
+# # fruits.add("kiwi")
+# # fruits.remove("orange")
+# # fruits.pop()
+# # fruits.clear()
+
+
+# print(fruits)
+
+
+# Tuple = () ordered, unchangeable, allows duplicate values
+
+# fruits = ("apple", "banana", "orange", "grape", "mango")
+# # print(dir(fruits))
+
+
+# # fruits.count("apple")
+# # print(fruits.index("apple"))
+# # fruits.remove("apple")
+# # fruits.append("kiwi")
+# # fruits.sort()
+# # fruits.reverse()
+# # fruits.clear()
+# # print(len(fruits))
+# print(fruits)
+
+# Shopping cart program using list, set and tuple
+
+# foods = []
+# prices =[]
+# total = 0
+
+# while True:
+#     food = input("Enter a food to add to your cart (q to quit): ")
+#     if food.lower() == "q":
+#         break
+#     else:
+#         price = float(input(f"Enter the price of the {food}: $"))
+#         foods.append(food)
+#         prices.append(price)
+ 
+        
+
+# print("-----Your Shopping Cart-----")
+
+# for food in foods:
+#     print(food, end=" ")
+   
+
+
+# for price in prices: 
+#     total = total + price 
+# print()
+# print(f"Your total is: ${total}")  
+
+# 2dlist = [list1, List2, List3]
+ 
+
+
+# grocery_List = [["apple", "banana", "orange"],
+#                 ["carrot", "broccoli", "spinach"],
+#                   ["chicken", "pork", "lamb", "fish"]]
+
+
+# for collection in grocery_List:
+#     for food in collection:
+#         print(food, end=" ")
+#     print()
+
+
+# num_pad = ((1, 2, 3,), 
+#            (4, 5, 6,), 
+#            (7, 8, 9,), 
+#            ("*", 0, "#"))
+
+# for row in num_pad:
+#     for num in row:
+#         print(num, end=" ")
+#     print()
+
+
+# Python quiz game 
+
+# questions = (("What is the capital of France?"),
+#               ("What is the largest planet in our solar system?"),
+#               ("What is the chemical symbol for gold?"),
+#               ("Who wrote 'Romeo and Juliet'?"),
+#               ("What is the tallest mammal?"))
+
+# options = (("a) Paris", "b) London", "c) Rome", "d) Berlin"),
+#            ("a) Earth", "b) Jupiter", "c) Mars", "d) Saturn"),
+#            ("a) Ag", "b) Au", "c) Gd", "d) Pt"),
+#            ("a) Charles Dickens", "b) William Shakespeare", "c) Jane Austen", "d) Mark Twain"),
+#            ("a) Elephant", "b) Giraffe", "c) Blue Whale", "d) Hippopotamus"))
+
+
+# answers = ("a", "b", "b", "b", "c")
+# guesses = []
+# score = 0
+# question_num = 0
+
+
+# for question in questions:
+#     print("----------")
+#     print(question)
+#     for option in options[question_num]:
+#         print(option)
+
+#     guess = input("Enter your answer (a, b, c, d): ").lower()
+#     guesses.append(guess)
+#     if guess == answers[question_num]:
+#         score += 1
+#         print("Correct!")
+#     else:
+#         print("Incorrect!")
+#         print(f"The correct answer is: {answers[question_num]}")
+
+
+#     question_num += 1
+
+
+# print("------------------")
+# print("    Results       ")
+# print("------------------")
+
+
+# print("answers: ", end=" ")
+# for answer in answers:
+#     print(answer, end=" ")
+# print()
+
+
+# print("guesses: ", end=" ")
+# for guess in guesses:
+#     print(guess, end=" ")
+# print()
+
+# score = int(score / len(questions) * 100)
+# print(f"Your score is: {score}%")
+
+
+
+# Dictionary = {} unordered, changeable, indexed by key, no duplicate keys
+
+
