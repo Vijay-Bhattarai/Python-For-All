@@ -456,6 +456,7 @@ time = 0
 
 # Countdown timer
 
+from ast import While
 import time
 
 # my_time = int(input("Enter the time in seconds:"))
@@ -769,3 +770,160 @@ import time
     
 # print()
 # print(f"Your total is: ${total:.2f}")
+
+
+# Random number
+# low = 1
+# high = 100
+# options =("rock", "paper", "scissors")
+# cards = ["2 of Hearts", "3 of Diamonds", "4 of Clubs", "5 of Spades", "6 of Hearts", "7 of Diamonds", "8 of Clubs", "9 of Spades", "10 of Hearts", "Jack of Diamonds", "Queen of Clubs", "King of Spades", "Ace of Hearts"]
+
+
+# import random
+
+# # number = random.randint(low, high)
+# # number = random.random()
+# # option = random.choice(options)
+
+# random.shuffle(cards)
+# print(cards)
+
+
+# # python number guessing game
+# import random
+
+# lowest_num = 1
+# highest_num = 100
+# answer = random.randint(lowest_num, highest_num)
+# guesses = 0 
+# is_running = True
+
+# print("Welcome to the Number Guessing Game!")
+# print(f"I'm thinking of a number between {lowest_num} and {highest_num}.")
+
+# while is_running:
+#     guess = input("Enter your guess: ")
+    
+#     if guess.isdigit():
+#         guess = int(guess)
+#         guesses += 1
+        
+#         if guess < lowest_num or guess > highest_num:
+#             print(f"Invalid guess! Please select a number between {lowest_num} and {highest_num}.")
+#         elif guess <answer:
+#             print("Too low! Try again.")
+#         elif guess > answer:
+#             print("Too high! Try again.")
+#         else:
+#             print(f"Correct! The answer was {answer}")
+#             print(f"Number of guesses: {guesses}")
+#             is_running = False
+
+#     else:
+#         print("Invalid guess!")
+#         print(f" Please select a number between {lowest_num} and {highest_num}.")
+
+# # Rock Paper Scissors Game
+# import random
+
+# options = ("rock", "paper", "scissors")
+# running = True
+
+# while running:
+#     player = None
+#     computer = random.choice(options)
+
+#     while player not in options:
+#         player = input("Enter rock, paper, or scissors: ")
+
+#     print(f"Player: {player}")
+#     print(f"Computer: {computer}")
+
+
+#     if player == computer:
+#         print("It's a tie!")
+#     elif player == "rock" and computer == "scissors":
+#         print("Player wins!")
+#     elif player == "paper" and computer == "rock":
+#         print("Player wins!")
+#     elif player == "scissors" and computer == "paper":
+#         print("Player wins!")
+#     else:
+#         print("You lose!")
+        
+#     if not input("Play again? (y/n): ").lower() == "y":
+#         running = False
+        
+# print("Thanks for playing!")
+      
+
+#  dice roller program ⚂
+
+
+# import random
+
+# # ◦ ┌ ┐ └ ┘ ─ │
+
+# "┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐"
+# "│                   │"
+# "│                   │"
+# "│                   │"
+# "└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘"
+
+
+# dict_art = {
+#     1:("┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐", 
+#        "│                   │", 
+#        "│          ◦        │", 
+#        "│                   │", 
+#        "└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘"),
+#     2:("┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐", 
+#        "│ ◦                 │", 
+#        "│                   │", 
+#        "│          ◦        │", 
+#        "└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘"),
+#     3:("┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐", 
+#        "│  ◦                │", 
+#        "│          ◦        │", 
+#        "│                 ◦ │", 
+#        "└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘"),
+#     4:("┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐", 
+#        "│  ◦                │", 
+#        "│          ◦        │", 
+#        "│      ◦          ◦ │", 
+#        "└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘"),
+#     5:("┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐",
+#        "│  ◦     ◦          │",
+#        "│  ◦      ◦         │",
+#        "│                 ◦ │",
+#        "└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘"),
+#     6:("┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐",
+#        "│  ◦     ◦          │",
+#        "│  ◦      ◦         │",
+#        "│  ◦              ◦ │",
+#        "└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘")
+     
+# }
+
+
+# dice = []
+# total = 0 
+# number_of_dice = int(input("Enter the number of dice to roll: "))
+
+# for die in range(number_of_dice):
+#     dice.append(random.randint(1, 6))
+    
+# # for die in range(number_of_dice):
+# #    for line in dict_art.get(dice[die]):
+# #       print(line)
+
+# for line in range(5):
+#    for die in dice:
+#       print(dict_art.get(die)[line], end=" ")
+#    print()
+
+# for die in dice:
+#       total = total + die
+# print(f"Total: {total}")
+
+
