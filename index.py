@@ -690,4 +690,82 @@ import time
 
 # Dictionary = {} unordered, changeable, indexed by key, no duplicate keys
 
+# capitals = {"USA": "Washington D.C.",
+#             "France": "Paris",
+#             "Japan": "Tokyo",
+#             "India": "New Delhi",}
 
+# print(dir(capitals))
+# print(help(capitals))
+
+# print(capitals.get("Singapore"))
+
+
+# if capitals.get("Japan"):
+#     print("The Capital exists!")
+# else:
+#     print("The Capital does not exist!")
+
+# capitals.update({"Germany": "Berlin"})
+# capitals.update({"Spain": "Madrid"})
+
+# capitals.pop("India")
+# capitals.popitem()
+# capitals.clear()
+
+
+# keys = capitals.keys()
+# for key in keys:
+#     print(key, end=" ")
+
+
+# values = capitals.values()
+
+# for value in capitals.values():
+#     print(value, end=" ")
+
+# items = capitals.items()
+
+# for key, value in capitals.items():
+#      print(f"{key}: {value}")
+
+# Concession stand program using dictionary
+
+# menu = {"beer": 2.50,
+#                "wine": 3.50,
+#                "chocolate": 1.50,
+#                "vodka": 1.00,
+#                "beer and wine": 3.00,
+#                 "chocolate and vodka": 2.00,
+#                 "beer and chocolate": 3.00,
+#                 "wine and vodka": 4.00,
+#                  "beer and vodka": 3.50,
+#                  "wine and chocolate": 4.00
+#                 }
+               
+# cart = []
+# total = 0
+
+
+# print("------------------- MENU ---------------------------")
+# for key, value in menu.items():
+#     print(f"{key:20}: ${value:.2f}")
+# print("----------------------------------------------------")
+
+
+# while True:
+#     food = input("Enter a food to add to your cart (q to quit): ").lower()
+#     if food == "q":
+#         break
+#     elif menu.get(food) is not None:
+#         cart.append(food)
+        
+# print("------------------- Your Order ----------------------")
+# for food in cart:
+#     # total = total + menu.get(food)
+#     total += menu.get(food)
+#     print(food, end=" ")
+    
+    
+# print()
+# print(f"Your total is: ${total:.2f}")
