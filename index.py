@@ -1228,3 +1228,22 @@ import time
 
 # if __name__ == ' __main__':
 #     main()
+
+# object = A 'bundle' of related attribute (variable) and (functions)
+# object-oriented programming (OOP) is a programming paradigm that uses objects to represent real-world entities.
+# Example. phoe, cup, book
+# you need a 'class' to create to create many objects
+
+# class = (blueprint) used to design the stucture and layout of an object 
+
+
+# from car import Car
+        
+# car1 = Car("BMW", "Red", 2026, True)
+# car2 = Car("Audi", "Blue", 2022, False)
+# car3 = Car("Mercede", "Black", 2020, True)
+
+
+# car1.describe()
+
+

@@ -63,5 +63,5 @@ The goal of this repository is to provide a clear and structured Python syntax r
 📌 Author
 
 👨‍💻 Vijay Bhattarai
-Aspiring AI Engineer | Automation & CRM Specialist
+AI Engineer | Automation & CRM Specialist
 📫 Email: bijaybhattrarai5544@gmail.com
