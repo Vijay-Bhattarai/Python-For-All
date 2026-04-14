@@ -1247,3 +1247,129 @@ import time
 # car1.describe()
 
 
+# class variable = Shared among all instance of a class 
+# Defined outside the constuctor 
+# Allow you to share among all object created from the class 
+
+# class Student:
+    
+#     class_year = 2024
+#     num_students = 0
+    
+    
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         Student.num_students += 1
+    
+# Student1 = Student("Vijay", 27)
+# Student2 = Student("Elon", 60)
+# Student2 = Student("Sam", 18)
+
+
+# # print(Student2.name)
+# # print(Student2.age)
+# # print(Student.class_year)
+# # print(Student.num_students)
+
+# print(f"My graduate class year is {Student.class_year} and I have {Student.num_students} students")
+# print(Student2.name)
+# print(Student2.age)
+# print(Student.class_year)
+# print(Student.num_students)
+
+
+# Inheritance = Allows to inherit attribute and methods another class
+# Helps with code resuability and extesibility
+# class Child(parent)
+
+# class Animal:
+    
+#     def __init__(self, name):
+#         self.name = name
+#         self.is_alive = True
+        
+#     def eat(self):
+#          print(f" {self.name} is eating")
+    
+#     def sleep(self):
+#         print(f" {self.name} is sleeping")
+        
+# class Dog(Animal):
+#     def speak(self):
+#         print("Woof! Woof!")
+         
+# class Cat(Animal):
+#      def speak(self):
+#         print("Meow! Meow!")
+
+# class Mouse(Animal):
+#      def speak(self):
+#         print("Squeak! Squeak!")
+# dog = Dog("Tiger")
+# cat = Cat("Meow")
+# mouse = Mouse("Mickey")
+
+# # print(dog.name)
+# # print(dog.is_alive)
+# # dog.eat()
+# # dog.sleep()
+
+# # dog.speak()
+# # cat.speak()
+# # mouse.speak()
+
+
+# mutiple inheritance =  inherit from more than one parent class
+# C(A, B)
+
+
+# mutilevel inheritance = inherit from a parent which inherits from another parent
+# C(B) <- B(A) <- A  
+
+# class Animal:
+    
+#     def __init__(self, name):
+#         self.name = name
+        
+#     def eat(self):
+#          print(f" {self.name} is eating")
+     
+#     def sleep(self):
+#          print(f" {self.name} is sleeping")
+    
+#     def eat(self):
+#         print(f"{self.name} is eating")
+        
+#     def sleep(self):
+#         print(f"{self.name} is sleeping")
+
+
+# class Prey(Animal):
+#     def flee(self):
+#         print(f"{self.name} is fleeing")
+
+# class Predator(Animal):
+#     def hunt(self):
+#         print(f"{self.name} is hunting")
+
+# class Rabbit(Prey):
+#     pass
+
+# class Hawk(Predator):
+#     pass
+
+# class Fish(Prey, Predator):
+#     pass
+    
+# rabbit = Rabbit("Bugs")
+# hawk = Hawk("Tony")
+# fish = Fish("Nemo")
+# # fish.hunt()
+
+# rabbit.eat()
+# rabbit.sleep()
+
+
+# Super() = function used in child class to call methods from a parent class (superclass)
+# allows you to extend the functionality of a inherited methods
