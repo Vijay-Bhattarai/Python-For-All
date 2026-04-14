@@ -927,3 +927,304 @@ import time
 # print(f"Total: {total}")
 
 
+# function = A block of resuable code
+# place () after the function name to invoke it
+
+
+# def  happy_new_year(Year, fname, lname):
+#       print(f"Happy New Year {Year}, {fname} {lname} !")
+#       print("Wishing you a year filled with joy and prosperity!")
+#       print("May all your dreams come true in the coming year!")
+#       print()
+
+# happy_new_year(2083, "Vijay", "Bhattarai")
+
+# def display_invoice(customer_name, amount, due_date):
+#     print(f"Invoice for {customer_name}")
+#     print(f"Amount Due: ${amount:.2f}")
+#     print(f"Due Date: {due_date}")
+    
+# display_invoice("Vijay Bhattarai", 250.75, "2024-07-15")
+
+
+# return = statement used to end a function and send a result back to the caller
+
+# def add(x, y):
+#    z= x + y
+#    return z
+
+
+# def subtract(x, y):
+#    z= x - y
+#    return z
+
+
+# def multiply(x, y):
+#    z= x * y
+#    return z
+
+# def divide(x, y):
+#    z= x / y
+#    return z
+
+# print(add(5,3))
+# print(subtract(5,3))
+# print(multiply(5,3))
+# print(divide(5,3))
+
+# def create_name(first_name, last_name):
+#      first_name = first_name.capitalize()
+#      last_name= last_name.capitalize()
+#      return first_name + " " + last_name
+
+# full_name = create_name("vijay", "bhattarai")
+# print(full_name)
+
+# default agruements - A defults vaule is assigned to a parameter in the function definition.
+# If the caller does not provide a value for that parameter, the default value will be used.
+#  of argument 1. positional arguments 2. keyword arguments 3. default arguments 4. arbitrary arguments
+
+# def net_price(list_price, discount = 0, tax = 0.05):
+#     return list_price * (1-discount) * (1 + tax)
+
+# print(net_price(100))
+# print(net_price(500, 0.1))
+
+# default arguments
+# import time
+
+
+# def count(end, start = 0):
+#      for x in range(start, end +1):
+#           print(x)
+#           time.sleep(1)
+#      print("Time's up!")
+     
+# count(30,15)
+
+# keyword arguments = am argument that is passed to a function by name, rather than by position.
+# keyword arguments are always passed after positional arguments.
+
+
+# def hello(greeting, title, first, last):
+#      print(f"{greeting}, {title} {first} {last}!")
+     
+# hello("Hello", title= "Mr.", last= "Bhattarai", first= "Vijay")
+
+
+# for x in range (1, 11):
+#      print(x, end="")
+
+# def get_phone(county, area, first, last):
+#      return f"{county}-{area}-{first}-{last}"
+
+# phone_num = get_phone(county="97", area="949", first="555", last="1212")
+
+# print(phone_num)
+
+#arbitrary arguments
+#*args = variable length argument list (allows you to pass mutiple non-key arguments)
+#**kwargs = variable length keyword argument list( allows you to pass multiple keyword-arguments)
+# * unpacking operator 
+
+
+# def add(*args):
+#      total = 0
+#      for arg in args:
+#        total += arg
+#      return total
+
+
+# print(add(1, 2, 3, 4, 5))
+
+# def display_name(*args):
+#      for arg in args:
+#           print(arg, end=" ")
+
+# display_name( "Mr.", " Vijay", "Bhattarai")
+
+
+# def print_address(**kwargs):
+#      for key, value in kwargs.items():
+#           print(f"{key}: {value}")
+     
+# print_address(street="123 Main St", 
+#               city="New York", 
+#               state="NY",
+#               zip="10001",
+#               country="USA")
+
+# agrs and kwargs 
+
+# def shipping_label(*args, **kwargs):
+#      for arg in args:
+#           print(arg, end=" ")
+#           print()
+          
+#      # for key, value in kwargs.items():
+#      #      print(f"{key}: {value}", end=" ")
+#      print(f"{kwargs.get('weight')} {kwargs.get('height')} {kwargs.get('length')} {kwargs.get('delivery_date')}")
+
+# shipping_label("123 Main St", "New York", "NY", "10001", "USA", 
+#                     weight=10, height=2, width=1, length=4, delivery_date="2024-07-15")
+
+
+# Iteratables = An object/collection that can return its elements one at a time , allowing it to be iterated over.
+# Iterables are objects that can be looped over using a for loop.
+# Iterables include lists, tuples, sets, dictionaries, and strings.
+
+# numbers = (1, 2, 3, 4, 5)
+
+# for num in numbers:
+#      print(num)
+
+
+# fruits = {"apple", "banana", "cherry", "coconut"}
+
+# for fruit in fruits:
+#      print(fruit)
+
+# name = "Vijay Bhattarai"
+
+# for char in name:
+#      print(char, end= " ")
+
+
+# my_dict = {"name": "Vijay", "age": 25, "city": "New York"}
+
+# for key, value in my_dict.items():
+#      print(f"{key}: {value}")
+
+# Membership Operators = used to test whatever a value or variable is found in a seqeunce
+# (string, list, tuple, set or dictornary)
+# 1. in
+# 2. not in 
+
+
+# word = "Apple"
+
+# letter = input("Enter a  secret letter: ")
+
+
+# if letter in word:
+#       print(f"Congratulations! You found the letter {letter}")
+# else:
+#       print(f"Sorry, the secret letter is not in the {word}.")
+
+# if letter not in word:
+#        print(f"Sorry, the secret letter is not in the {word}.")
+# else:
+#     print(f"Congratulations! You found the letter {letter}")
+    
+# List Comprehesions = A concise way to create list in python 
+# compact and easier to read than tradtional loops
+# [Expression for value in iterable if condition]
+
+# doubles = [x * 2 for x in range(1, 11)]
+# triples = [y * 3 for y in range(1, 11)]
+# squares = [z * z for z in range(1, 11)] 
+
+# print(squares)
+
+# fruits = ["apple", "banana", "cherry", "coconut"]
+
+# fruits = [fruit.upper() for fruit in fruits]
+# fruits_chars = [fruit[0] for fruit in fruits]
+# print(fruits_chars)
+
+# numbers = [1,-2,3,-4,5,-6,7,-8,9,-10]
+# postive_num = [ num for num in numbers if num >= 0] 
+# negative_num = [ num for num in numbers if num <= 0] 
+# even_num = [ num for num in numbers if num % 2 == 0 ] 
+# odd_num = [ num for num in numbers if num % 2 == 1 ] 
+
+# print(odd_num)
+
+# Match-case-statement (switch): An aternative to using many 'elif' statement
+# Execute some code if a value matches a 'case'
+# Benefits: clearer and syntax is more readable 
+
+# def day_of_week(day):
+#     match day:
+#         case 1: 
+#             return "It sunday"
+#         case 2:
+#             return "It monday"
+#         case 3:
+#             return "It tuesday"
+#         case 4:
+#             return "It wednesday"
+#         case 5:
+#             return "It thursday"
+#         case 6:
+#             return "It friday"
+#         case 7:
+#             return "It saturday"
+#         case _:
+#             return "Invalid day"
+        
+        
+# print(day_of_week(7))
+
+# def is_weekend(day):
+#     match day:
+#         case "Sunday" | "Saturday": 
+#             return True
+#         case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+#             return False
+#         case _:
+#             return "Invalid day"
+
+# print(is_weekend("Monday"))
+
+
+# module = a file containing python code that can be imported into other python files
+# import module_name
+# useful to break up large program resuable separate files
+
+# print(help("modules"))
+
+
+# import math
+# import math as m
+# from math import pi
+
+# print(pi)
+
+# Variable scope = where a variable is visible and accessible 
+# scope resolution = (LEGB) local -> enclosing -> global -> built-in
+
+
+# def func1():
+#     a= 1
+#     print(a)
+    
+# def func2():
+#     a = 2
+#     print(a)
+    
+    
+# func1()
+# func2()
+
+
+# from math import e
+
+
+# def fun1():
+#     print(e)
+    
+# e = 2.374343
+    
+# fun1()
+
+
+# if__name__ == "__main__": (this script can be imported or run standlone)
+#  functins and classed in the module can be reused
+# without the main block of  code executing 
+
+# def main():
+#     pass
+
+# if __name__ == ' __main__':
+#     main()
