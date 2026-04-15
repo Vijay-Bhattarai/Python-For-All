@@ -1373,3 +1373,362 @@ import time
 
 # Super() = function used in child class to call methods from a parent class (superclass)
 # allows you to extend the functionality of a inherited methods
+
+# class Shape:
+#     def __init__(self, color, is_filled):
+#         self.color = color
+#         self.is_filled = is_filled
+
+
+# class Circle(Shape):
+#     def __init__(self, color, is_filled, radius):
+#         super().__init__(color, is_filled)
+#         self.radius = radius
+        
+
+# class Sqaure(Shape):
+#     def __init__(self, color, is_filled, width):
+#         super().__init__(color, is_filled)
+#         self.width = width
+        
+        
+# class Triangle(Shape):
+#     def __init__(self, color, is_filled, width, height):
+#         super().__init__(color, is_filled)
+#         self.width = width 
+#         self.height = height 
+        
+        
+        
+# circle = Circle("red", True, 10)
+# square = Sqaure("blue", False, 5)
+# triangle = Triangle("green", True, 10, 20)
+
+
+# print(circle.color)
+# print(circle.is_filled)
+# # print(circle.radius)
+# # print(triangle.height)
+# print(square.width)
+
+# Polymorphism = Greek word that means to "have many forms or faces"
+# poly = Many 
+# Morphe = many forms or faces
+# poly = (object) can have many forms or faces
+# Morphe = (method) can have many forms or faces
+
+# Two ways to active polymorphism
+# 1. Inheritance = An object could be treated of the same type as a parent class
+# 2. 'Duck typing' = Object must have necessary attribute/methods
+
+
+# from abc import ABC, abstractmethod
+
+
+# class Shape(ABC):
+    
+#     @abstractmethod
+#     def area(self):
+#         pass
+
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
+        
+#     def area(self):
+#         return 3.14 * self.radius ** 2
+
+# class Square(Shape):
+#     def __init__(self, side):
+#         self.side = side
+    
+#     def area(self):
+#         return self.side ** 2
+
+# class Triangle(Shape):
+#     def __init__(self, base, height):
+#         self.base = base
+#         self.height = height
+        
+#     def area(self):
+#         return  self.base * self.height * 0.5
+
+# class Pizza(Circle):
+#     def __init__(self, radius, topping):
+#         super().__init__(radius)
+#         self.topping = topping
+
+# shapes = [Circle(4), Square(5), Triangle(6, 7), Pizza(8, "cheese")]
+
+
+# for shape in shapes:
+#     print(shape.area())
+    
+    
+# Duck typing = Another way to achieve polymorphism beside inheritance
+# object must have the minumun necessary attributes/methods 
+# 'if it look a duck and quaks like a duck, it must be a duck'. 
+
+# class Animal:
+#     alive = True
+    
+# class Dog(Animal):
+#     def speak(self):
+#         print("Woof! Woof!")
+        
+# class Cat(Animal):
+#     def speak(self):
+#         print("Meow! Meow!")
+        
+# class Car:
+#     alive = False
+    
+#     def speak(self):
+#         print("Vroom! Vroom!")
+        
+# dog = Dog()
+# cat = Cat()
+# car = Car()
+    
+        
+# animals = [Dog(), Cat(), Car()]
+
+
+# for animal in animals:
+#     animal.speak()
+#     print(animal.alive)
+
+# Static Method
+# A static method is a method that does not receive self or cls automatically.
+# It behaves like a normal function but is placed inside a class because it logically belongs there. 
+# It cannot access or modify class or instance data directly.
+
+# A utility function is a helper function that performs a task related to the class but does not depend on class-level or instance-level data.
+
+# Below is the syntax of static method:
+
+# class C:
+#     @staticmethod
+#     def method(arg1, arg2, ...):
+#         pass
+
+# Parameters:
+
+# arg1, arg2, ...: Regular function parameters
+# No self or cls is passed automatically
+
+# instance methods = best for operations on instance of the class (object)
+# static methods = best for utilty that do not need access to class data
+
+
+# class Employee:
+#     def __init__(self, name, position):
+#         self.name = name
+#         self.position = position
+        
+#     def get_info(self):
+#         return f"{self.name} = {self.position}"
+    
+
+#     @staticmethod
+#     def is_valid_position(postion):
+#         valid_position = ["Developer", "Manager", "QA"]
+#         return postion in valid_position
+    
+# employee1 = Employee("Vijay", "Developer")
+# employee2 = Employee("Sam", "QA")
+# employee3 = Employee("Elon", "Manager")
+
+
+# print(Employee.is_valid_position("QA"))
+# print(employee1.get_info())
+# print(employee2.get_info())
+# print(employee3.get_info())
+
+
+# class methods = Allow operations reaated to the class itself
+# Take (cls) as the first parameter, which represents the class itself 
+
+# Class Method
+# A class method is a method that receives the class itself as the first argument, conventionally named cls. It can access and modify class-level data and is often used to define factory methods. A factory method is a method that creates and returns an object of the class. It acts as an alternative constructor, allowing objects to be created in different ways.
+
+# Below is the syntax of class method:
+
+# class C:
+#     @classmethod
+#     def method(cls, arg1, arg2, ...):
+#         pass
+
+# Parameters:
+
+# cls: Reference to the class (automatically passed)
+# arg1, arg2, ...: Additional arguments as required
+
+# from datetime import date
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     @classmethod
+#     def from_birth_year(cls, name, year):
+#         return cls(name, date.today().year - year)
+
+# p = Person.from_birth_year("Vijay", 1999)
+# print(p.name)
+# print(p.age)   
+
+
+# Magic methods = Dunder methods (doublescore) __init__, __str__, __len__, __add__, __eq__
+# These methods are automatically called by Python when certain operations are performed on an object.
+# They are used to define the behavior of the object's class and are often used to implement special features or behaviors.
+
+# class Book:
+#     def __init__(self, title, author, num_pages):
+#         self.title = title
+#         self.author = author
+#         self.num_pages = num_pages
+    
+#     def __str__(self):
+#         return f"{self.title} by {self.author}"
+    
+#     def __eq__(self, other):
+#         return self.title == other.title and self.author == other.author
+    
+#     def __lt__(self, other):
+#         return self.num_pages < other.num_pages
+    
+#     def __gt__(self, other):
+#         return self.num_pages > other.num_pages
+    
+
+# book1 = Book("Python for beginners", "Vijay", 200)
+# book2 = Book("Python for Advance", "Sam", 300)
+# book3 = Book("Python for intermediate", "Elon", 100)
+
+
+# print(book3)
+# print(book1 == book2)
+# print (book3 < book2)
+# print (book1 > book3)
+
+# property = A descriptor that defines the behavior of an attribute.
+# It can be used to define additional functionality or properties for an object.
+# Befits : Add additional logic when read, write, or delete attributes
+# Give you getter , setter, and deleter method 
+
+# class Student:
+#     def __init__(self, name):
+#         self._name = name
+
+#     name = property(lambda self: self._name)
+
+# s = Student("shakshi")
+# print(s.name)
+
+
+# class Alphabet:
+#     def __init__(self, value):
+#         self._value = value
+
+#     def getValue(self):
+#         print("Getting value")
+#         return self._value
+
+#     def setValue(self, value):
+#         print("Setting value to " + value)
+#         self._value = value
+
+#     def delValue(self):
+#         print("Deleting value")
+#         del self._value
+
+#     value = property(getValue, setValue, delValue)
+
+# # Usage
+# x = Alphabet("Hey World")
+# print(x.value)
+
+# x.value = "GfG"
+# del x.value
+
+# class Rectangle:
+#      def __init__(self, width, height):
+#          self._width = width
+#          self._height = height
+         
+#      @property
+#      def width(self):
+#       return f"{self._width:.1f}cm"
+    
+#      @property
+#      def height(self):
+#         return f"{self._height:.1f}cm"
+    
+#      @width.setter
+#      def width(self, new_width):
+#          if new_width > 0:
+#              self._width = new_width
+#          else:
+#              print("Width must be greater than 0")
+    
+#      @height.setter
+#      def height(self, new_height):
+#          if new_height > 0:
+#              self._height = new_height
+#          else:
+#               print("Height must be greater than 0")
+              
+#      @width.deleter
+#      def width(self):
+#         print("Width has been deleted")
+#         del self._width
+       
+#      @height.deleter
+#      def height(self):
+#         print("Height has been deleted")
+#         del self._height
+    
+# rectangle = Rectangle(10, 20)
+
+
+# rectangle.width = 15
+# rectangle.height = 2
+
+# # print(rectangle.width)
+# # print(rectangle.height) 
+
+# del rectangle.width
+# del rectangle.height
+
+# Example2
+
+# class Alphabet:
+#     def __init__(self, value):
+#         self._value = value
+
+#     @property
+#     def value(self):
+#         print("Getting value")
+#         return self._value
+
+#     @value.setter
+#     def value(self, value):
+#         print("Setting value to " + value)
+#         self._value = value
+
+#     @value.deleter
+#     def value(self):
+#         print("Deleting value")
+#         del self._value
+
+# # Usage
+# x = Alphabet("Peter")
+# print(x.value)
+
+# x.value = "Diesel"
+# del x.value
+
+
+# Decorator = A function that 
