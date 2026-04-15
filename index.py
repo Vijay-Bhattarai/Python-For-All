@@ -1731,4 +1731,192 @@ import time
 # del x.value
 
 
-# Decorator = A function that 
+# Decorator = A function that extends the behavior of another function.
+# It can be used to modify the behavior of a function without changing its source code.
+# Decorators are commonly used to add logging, error handling, or other functionalities to existing functions.
+# w/o modifiying the base function 
+# @ add_sprinkles
+# get_ice_cream("Vanilla")
+
+# def add_sprinkles(func):
+#    def wrapper(*agrs, **kwargs):
+#        print("Adding sprinkles")
+#        func(*agrs, **kwargs)
+#    return wrapper
+
+# def add_fudge(func):
+#     def wrapper(*agrs, **kwargs):
+#         print("Adding fudge")
+#         func(*agrs, **kwargs)
+#     return wrapper
+    
+# @add_sprinkles
+# @add_fudge
+# def get_ice_cream(flavor):
+#     print(f"You got {flavor} ice cream")
+    
+# get_ice_cream("Vanilla")
+
+
+# exception = An event that interrupts the flow of a program 
+# (ZeroDivisonEror, TypeError, ValueError)
+# Try Except Finally = A block of code that can be executed without causing an error
+#  Try Except = A block of code that can be executed without causing an error
+#  Finally = A block of code that is always executed, regardless of the outcome of the try block
+
+# try:
+#     number= int(input("Enter a number:"))
+#     print(1 / number)
+# except ZeroDivisionError:
+#     print("You can't divide by zero")
+# except ValueError:
+#     print("Enter a number only")
+# except Exception:
+#     print("Something went wrong!")
+# finally:
+#     print("Do some clean up here!")
+
+# Python file detection 
+
+# import os 
+
+# file_path = "stuff/test.txt"
+
+
+# if os.path.exists(file_path):
+#     print(f"The location '{file_path}' exists")
+    
+#     if os.path.isfile(file_path):
+#         print("That is a file")
+    
+# else:
+#     print("File does not exist")  
+    
+    
+# Python writing file (.txt, json, .csv)
+
+# import json
+# import csv
+
+# employees = [["Name", "Age", "Job" ],
+#              ["Vijay", 27, "Developer"], 
+#              ["Spongebob", 37, "Cook"], 
+#              ["Sandy", 30, " Teacher"]]
+
+# employee = {"name": "Vijay", 
+#             "age": 20, 
+#             "salary": 100000,
+#             "position": "Developer",
+#             "department": "IT",
+#             "hobbies": ["Reading", "Coding", "Gaming"],
+#             "address": {"city": "Bangalore", "pincode": 560001},
+#             "contact": {"email": "<EMAIL>", "phone": "9876543210"},
+#             }
+
+# file_path = "output.csv"
+ 
+# try:   
+#     with open(file_path, "w", newline="") as file:
+#         # json.dump(employee, file, indent=4) for json
+#         writer = csv.writer(file)
+#         for row in employees:
+#             writer.writerow(row)
+#         print(f"csv file '{file_path}' was created")
+# except FileExistsError:
+#         print("That file already exists!")
+
+
+# Python reding file (.txt, .json, .csv)
+
+# import csv
+
+# file_path = "output.csv"
+
+# try:
+#     with open(file_path, "r") as file:
+#         # data = file.read()
+#         # data = json.load(file)
+#         data = csv.reader(file)
+#         for line in data:
+#             print(line)
+# except FileNotFoundError:
+#     print("File was not found")
+# except PermissionError:
+#     print("You do not have permission to read  that file")
+
+#  Dates & times 📅
+
+# import datetime
+
+# date = datetime.date(2026, 1, 1)
+# today = datetime.date.today()
+
+# time = datetime.time(12,30, 0)
+
+# now = datetime.datetime.now()
+
+# now = now.strftime("%Y-%m-%d %H:%M:%S")
+# print(now)
+
+
+# Multithreading in Python allows multiple threads (smaller units of a process) to run concurrently, enabling efficient multitasking. It is especially useful for I/O-bound tasks like file handling, network requests, or user interactions.
+
+# What is a Process?
+# A process is an executing program with:
+
+# Program code (instructions to run)
+# Data (variables, buffers, workspace)
+# Execution context (state of the process)
+
+# import threading
+# import time
+
+# def square(num):
+#     print(f"Square: {num*num}")
+#     time.sleep(5)
+
+# def cube(num):
+#     print(f"Cube: {num*num*num}")
+#     time.sleep(2)
+
+# t1 = threading.Thread(target=square, args=(4,))
+# t2 = threading.Thread(target=cube, args=(4,))
+
+# t1.start()
+# t2.start()
+# t1.join()
+# t2.join()
+
+# print("Done!")
+
+# How to connect to an Api using python
+
+# import requests 
+
+# base_url = "https://pokeapi.co/api/v2/"
+
+# def get_pokemon_info(name):
+#     url = f"{base_url}/pokemon/{name}"
+#     response = requests.get(url)
+    
+    
+#     if response.status_code == 200:
+#         pokemon_data =response.json()
+#         return pokemon_data
+#     else:
+#         print(f"Failed to retrieve data {response.status_code}")
+        
+
+# pokemon_name = 'pikachu'
+# pokemon_info = get_pokemon_info(pokemon_name)
+
+
+
+# if pokemon_info:
+#     print(f"Name: {pokemon_info['name']}")
+#     print(f"Height: {pokemon_info['height']}")
+#     print(f"Weight: {pokemon_info['weight']}")
+
+
+
+## BEST OF LUCK !!! - 4/15/2026
